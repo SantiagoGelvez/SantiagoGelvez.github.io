@@ -1,0 +1,275 @@
+/* ---- Animación de rebote desde el Header ---- */
+@-webkit-keyframes menuAnimacion{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+/* ---- Consideraciones generales ---- */
+
+body{
+  margin: 0 auto;
+  background: #02010a;
+  font-family: 'Dancing Script', cursive;
+}
+#contenido{
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+img{
+  filter: drop-shadow(2px 2px 2px #02010a);
+}
+/* ---- Propiedades para el encabezado ---- */
+
+header{
+  width: 100%;
+  margin: 0 auto;
+  background: #5B7989;
+  color: white;
+  animation: menuAnimacion 1s;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#titulo{
+  vertical-align: middle;
+  margin: 0;
+  padding: 3% 2%;
+  width: 70%;
+  font-size: 2.4em;
+  text-shadow: 2px 2px 2px #02010a;
+}
+
+#menu{
+  width: 30%;
+  text-align: center;
+}
+#menu ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+#menu ul > li{
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 33.3%;
+}
+#menu ul > li > a{
+  padding: 50% 0;
+  color: white;
+  display: block;
+  flex-flow: row;
+  font-size: 1.2em;
+}
+
+/* ---- Requisitos CSS para la pagina principal ---- */
+
+#imagen-central{
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  background: #82C3A6;
+}
+#imagen-central img{
+  margin: 4% 10%;
+  width: 80%;
+}
+
+#secundaria{
+  width: 100%;
+  background: #d5c75f;
+  display: flex;
+}
+.ima-secundaria{
+  width: 50%;
+  text-align: center;
+  font-size: 1.3em;
+  margin: 2% 0;
+}
+.ima-secundaria img{
+  margin: 0 10%;
+  width: 80%;
+}
+.ima-secundaria a{
+  color: black;
+}
+
+#img-paisaje{
+  transition: transform 1s, filter 1s, border 1s;
+}
+#img-paisaje:hover{
+  transform: rotate(10deg);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  border: 2px solid #82c3a6;
+}
+#img-retrato{
+  transition: transform 1s, filter 1s, border 1s;
+}
+#img-retrato:hover{
+  transform: translate(-20px,-5px);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  border: 2px solid #82c3a6;
+}
+
+/* ---- Requisitos CSS para las paginas secundarias ----*/
+
+#galeria{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 2%;
+  background: #d5c75f;
+}
+.ima-galeria{
+  display: block;
+  width: 33.3%;
+}
+.ima-galeria img{
+  width: 85%;
+  margin: 7.5%;
+}
+.ima-galeria:first-child{
+  filter: blur(10px);
+}
+.ima-galeria:nth-child(even){
+  filter: grayscale(100%);
+}
+.ima-galeria:nth-child(3){
+  filter: sepia(90%);
+}
+
+/* ---- Propiedades del pie de pagina ---- */
+
+footer{
+  width: 94%;
+  border-radius: 0 0 10px 10px;
+  padding: 0 3%;
+  background: #C6d5c5;
+  display: flex;
+}
+
+img[src$=".png"]{
+  filter: none;
+  border-radius: 10px;
+  width: 25px;
+  vertical-align: middle;
+}
+
+.pie-pagina{
+  font-size: 1.2em;
+  margin: 2% 1% 2% 1%;
+  width: 25%;
+}
+.pie-pagina ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.pie-pagina > h1{
+  margin: 0;
+  font-size: 1.6em;
+}
+.pie-pagina:nth-child(2) > p{
+  margin: 0;
+}
+.pie-pagina:nth-child(3) ul > li{
+  padding: 3px 0;
+}
+
+a[href^="https:"]{
+  text-decoration-line: none;
+  color: black;
+}
+
+/* --- ------------------------------- --- */
+/* ----- Querie para modo adaptativo ----- */
+/* --- ------------------------------- --- */
+@media (max-width:899px) and (min-width:701px) {
+  body{
+    width: 100%;
+  }
+  #contenido{
+    width: 100%;
+  }
+  #titulo{
+    text-align: center;
+    font-size:5vw;
+  }
+  #menu ul > li > a{
+    font-size: 2.2vw;
+  }
+
+}
+@media screen and (max-width:700px) {
+  body{
+    width: 100%;
+    font-size: 3vw;
+  }
+  #contenido{
+    width: 100%;
+  }
+  
+
+  /* ---- Propiedades para el encabezado ---- */
+
+  header{
+    flex-direction: column;
+  }
+
+  #titulo{
+    padding: 0 10.5%;
+    margin: 3% 0 1% 0;
+    display: block;
+    width: 79%;
+    text-align: center;
+  }
+
+  #menu{
+    width: 100%;
+  }
+  #menu ul {
+    margin: 0 20%;
+    width: 60%;
+  }
+  #menu ul > li > a{
+    padding: 10% 0 20% 0;
+  }
+
+  /* ---- Requisitos CSS para el cuerpo de las paginas ---- */
+
+  #secundaria{
+    flex-flow: column;
+  }
+  .ima-secundaria{
+    width: 100%;
+  }
+
+  .ima-galeria{
+    display: block;
+    width: 100%;
+  }
+
+  footer{
+    flex-direction: column;
+  }
+
+  .pie-pagina:first-child > h1 {
+    margin-top: 10%;
+  }
+  .pie-pagina{
+    width: 80%;
+    margin: 0 10% 10% 10%;
+    font-size: 1.3em;
+  }
+}
