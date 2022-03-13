@@ -29,6 +29,8 @@ var pollo = {
     Y: [],
 };
 
+var died = false;
+
 fondo.imagen = new Image();
 fondo.imagen.src = fondo.URL;
 fondo.imagen.addEventListener("load", cargarFondo);
