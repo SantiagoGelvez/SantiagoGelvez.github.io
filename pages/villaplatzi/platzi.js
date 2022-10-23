@@ -2,12 +2,12 @@ var vp = document.getElementById("villaplatzi");
 var papel = vp.getContext("2d");
 
 var fondo = {
-    URL: "tile.png",
+    URL: "./assets/img/tile.png",
     CARGAOK: false,
 };
 
 var vaca = {
-    URL: "vaca2.png",
+    URL: "./assets/img/vaca2.png",
     CARGAOK: false,
     CANTIDAD: 0,
     X: [],
@@ -15,14 +15,14 @@ var vaca = {
 };
 
 var cerdo = {
-    URL: "cerdo2.png",
+    URL: "./assets/img/cerdo2.png",
     CARGAOK: false,
     X: aleatorio(0, 2) * 20,
     Y: aleatorio(0, 2) * 20,
 };
 
 var pollo = {
-    URL: "pollo2.png",
+    URL: "./assets/img/pollo2.png",
     CARGAOK: false,
     CANTIDAD: 0,
     X: [],

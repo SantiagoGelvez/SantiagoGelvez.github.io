@@ -4,12 +4,15 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portafolio - Santiago Gelvez</title>
+
+        <title>Portfolio - Santiago Gelvez</title>
+        
         <link rel="icon" href="https://i.imgur.com/MX7yskP.png" />
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="../css/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+        
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGQV84WHFN"></script>
         <script>
@@ -23,26 +26,82 @@
     <body>
         <header class="header">
             <figure class="header-logo">
-                <a href="./">
+                <a href="../">
                     <img src="https://i.imgur.com/B2b6rjP.png" alt="logo" />
+
                     <img src="https://i.imgur.com/CwS1rDg.png" alt="SantiagoGelvez" />
                 </a>
             </figure>
+
             <nav class="header-menu">
                 <ul>
-                    <li><a href="./">Portafolio</a></li>
                     <li><a href="./me.html">Con&oacute;ceme</a></li>
-                    <li><a href="./">Descargar CV</a></li>
+
+                    <li><a href="./" class="selected">Portafolio</a></li>
+
+                    <li><a href="https://www.dropbox.com/s/g2ph23n18184adl/Santiago_Andres_Gelvez_Camargo_CV.pdf?dl=0" target="_blank" download>Descargar CV</a></li>
                 </ul>
             </nav>
         </header>
-        <ul>
-            <li><a href="https://platzicommerce.santiagogelvez.com" target="_blank">Platzicommerce</a></li>
-            <li><a href="./villaplatzi/villa.html" target="_blank">VillaPlatzi - Modified</a></li>
-            <li><a href="./cajero/atm.html" target="_blank">Cajero Platzi - Modified</a></li>
-            <li><a href="./canvas/dibujo.html" target="_blank">Dibujo Canvas Platzi - Modified</a></li>
-            <li><a href="./dibujo/flechas.html" target="_blank">Dibujando</a></li>
-            <li><a href="./PhotosProject/index.html" target="_blank">Proyecto Fotos</a></li>
-        </ul>
+
+        <section class="portfolio-items">
+            <header>
+                <h1>Portfolio</h1>
+                <p>Here you can find some projects where I can practice all that I learn every day. Hope you enjoy with these litle projects</p>
+            </header>
+            <ul>
+                <li>
+                    <a href="https://platzicommerce.santiagogelvez.com" target="_blank">
+                        <img src="https://www.dropbox.com/s/59qp4fjlc9q80wf/platzicommerce.png?raw=1" alt="platzicommerce">
+                        Platzicommerce
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://exchange.santiagogelvez.com" target="_blank">
+                        <img src="https://www.dropbox.com/s/z1psvxf8sxz5asa/exchangeplatzi.png?raw=1" alt="exchangeplatzi">Exchange Platzi
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="./PhotosProject/index.html" target="_blank">
+                        <img src="https://www.dropbox.com/s/2420p935dcz5wil/photonextu.png?raw=1" alt="photonextu">
+                        Photos Project - Next U
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="./villaplatzi/villa.html" target="_blank">
+                        <img src="https://www.dropbox.com/s/eqvj1w1r9qxz0vw/villaplatzi.png?raw=1" alt="villaplatzi">
+                        VillaPlatzi - Modified
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="./cajero/atm.html" target="_blank">
+                        <img src="https://www.dropbox.com/s/y9jilm1gyuwccna/bankplatzi.png?raw=1" alt="atmplatzi">
+                        Cajero Platzi - Modified
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="./dibujo/flechas.html" target="_blank">
+                        <img src="https://www.dropbox.com/s/7imf8whdr95ttst/drawing.png?raw=1" alt="drawingplatzi">
+                        Drawing Platzi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./canvas/dibujo.html" target="_blank">
+                        <img src="https://www.dropbox.com/s/k7fwygbv8ebixhg/canvas.png?raw=1" alt="canvasplatzi">
+                        Dibujo Canvas Platzi - Modified
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Made whit &#129505; in HTML & CSS - &copy; Copyright 2021 by Santiago Gelvez</p>
+        </footer>
     </body>
 </html>

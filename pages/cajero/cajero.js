@@ -13,21 +13,24 @@ class Billete {
 }
 //**Imagenes de los billetes 
 var imagenes = [];
-imagenes["500"]="billete500.jpg";
-imagenes["100"]="billete100.jpg";
-imagenes["50"]="billete50.jpg";
-imagenes["20"]="billete20.jpg";
-imagenes["10"]="billete10.jpg";
-imagenes["5"]="billete5.jpg";
-imagenes["1"]="billete1.jpg";
+imagenes["500"]="./assets/img/billete500.jpg";
+imagenes["100"]="./assets/img/billete100.jpg";
+imagenes["50"]="./assets/img/billete50.jpg";
+imagenes["20"]="./assets/img/billete20.jpg";
+imagenes["10"]="./assets/img/billete10.jpg";
+imagenes["5"]="./assets/img/billete5.jpg";
+imagenes["1"]="./assets/img/billete1.jpg";
 
 //****Asignacion de lo elementos HTML a variables en JS
 var b = document.getElementById("extraer"); //En b se guarda el boton extraer
+var recargar = document.getElementById("recargar");
+
 var resultado = document.getElementById("resultado");
 var restante = document.getElementById("restante");
 
 var caja = [];  /*Arreglo de los billetes que tengo en la caja
 El arreglo es de la forma nombre:valor*/
+var recarga = [];
 var entregado = []; /*Arreglo de los billetes retirados de la caja*/
 var div = 0;
 var papeles = 0;
@@ -43,12 +46,21 @@ caja.push( new Billete("10", 10, 40) );
 caja.push( new Billete("5", 5, 40) );
 caja.push( new Billete("1", 1, 40) );
 
+recarga.push( new Billete("500", 500, 20) );
+recarga.push( new Billete("100", 100, 20) );
+recarga.push( new Billete("50", 50, 30) );
+recarga.push( new Billete("20", 20, 50) );
+recarga.push( new Billete("10", 10, 40) );
+recarga.push( new Billete("5", 5, 40) );
+recarga.push( new Billete("1", 1, 40) );
+
 /** Muestra la cantidad de billetes que hay en la caja*/
 for(var res of caja){
     restante.innerHTML += res.cantidad + " billetes de $" + res.valor + "<br/>";
 }
 
 b.addEventListener("click", entregarDinero); // Al hacer clic en el boton se ejecuta la funcion 'entregarDinero'
+recargar.addEventListener("click", recargarDinero)
 
 function entregarDinero(){
     t = document.getElementById("dinero");
@@ -71,7 +83,7 @@ function entregarDinero(){
         }
     }
     if (dinero > 0){
-        resultado.innerHTML = "No tengo dinero";
+        resultado.innerHTML += "No tengo dinero";
         entregado = [];
     }
     else{
@@ -95,4 +107,13 @@ function entregarDinero(){
     console.log(entregado, caja);
 }
 
+function recargarDinero(){
+    restante.innerHTML = "";
+    let j = 0;
+    for(var moneda of caja){
+        moneda.cantidad += recarga[j].cantidad
+        restante.innerHTML += moneda.cantidad + " billetes de $" + moneda.valor + "<br/>";
+        j++
+    }
+}
 

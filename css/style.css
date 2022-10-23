@@ -62,6 +62,10 @@ body{
     background-color: var(--second-color);
     color: var(--background-color);
 }
+.selected{
+    border-color: var(--second-color);
+    color: var(--second-color);
+}
 .hero{
     margin: 1em 0 0 0;
     display: flex;
@@ -116,6 +120,97 @@ body{
 }
 .highlights{
     height: 100vh;
+}
+.introduction{
+    font-size: 2em;
+    border-bottom: 5px solid var(--second-color);
+    padding-bottom: 2em;
+}
+.introduction h1{
+    margin: 2em 4em 2em 2em;
+}
+.introduction p{
+    margin: 1em 7em 2em 6em;
+}
+.portfolio-items{
+    font-size: 1.5em;
+    border-bottom: 5px solid var(--second-color);
+    padding-bottom: 2em;
+}
+.portfolio-items header{
+    margin: 2em;
+}
+.portfolio-items ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1em 2em;
+}
+.portfolio-items ul li{
+    display: block;
+    width: 25%;
+    margin: 1em 2em;
+    text-align: center;
+}
+.portfolio-items ul li img{
+    display: block;
+    filter: grayscale(60%);
+    width: 90%;
+    margin: 0 auto;
+    transition: transform 1s, filter 1s;
+}
+.portfolio-items ul li img:hover{
+    filter: grayscale(10%);
+    transform: scale(1.1, 1.1) translateY(-5%);
+    cursor: pointer;
+}
+.portfolio-items ul li a{
+    text-decoration: none;
+}
+.portfolio-items ul li a:hover{
+    text-decoration: underline;
+    color: var(--second-color);
+}
+.main-project{
+    width: 80vw;
+    font-size: 1.5em;
+    margin: 3em auto;
+}
+.project-atm, .project-drawing{
+    display: flex;
+}
+.project-atm div{
+    width: 30%;
+}
+.project-atm .delivered{
+    width: 80%;
+}
+.main-project h1{
+    margin: 1em auto 1em auto;
+}
+.main-project div{
+    display: block;
+    text-align: center;
+    margin: 1em auto;
+}
+.main-project-inputs input, #recargar{
+    height: 1.5em;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+input[type=button]{
+    padding: 1px 0.5em;
+    background: var(--background-color);
+    color: var(--principal-font);
+    border-radius: 7px;
+    border-color: var(--second-color);
+}
+input[type=button]:hover{
+    padding: 1px 0.5em;
+    background: var(--second-color);
+    color: black;
+    cursor: pointer;
+    border-radius: 7px;
 }
 @media(max-width: 800px){
     .header {
