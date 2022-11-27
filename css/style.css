@@ -133,7 +133,7 @@ body{
     margin: 1em 7em 2em 6em;
 }
 .portfolio-items{
-    font-size: 2.5vw;
+    font-size: 1.75vw;
     border-bottom: 5px solid var(--second-color);
     padding-bottom: 2em;
 }
@@ -149,7 +149,7 @@ body{
 .portfolio-items ul li{
     display: block;
     width: 25%;
-    margin: 1em 2em;
+    margin: 1rem 2rem 3rem 2rem;
     text-align: center;
 }
 .portfolio-items ul li img{
